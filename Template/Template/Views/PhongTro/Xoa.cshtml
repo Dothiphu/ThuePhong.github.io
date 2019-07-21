@@ -1,0 +1,65 @@
+﻿@model Template.Models.Phong
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>Xoa</h2>
+
+<h3>Bạn chắc chắn muốn xóa phòng này?</h3>
+<div>
+    <h4>Phong</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaPhong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenPhong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaPhong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DienTich)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DienTich)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "PhongTro")
+        </div>
+    }
+</div>

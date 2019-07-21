@@ -1,0 +1,43 @@
+﻿@model Template.Models.DichVu
+
+@{
+    ViewBag.Title = "Hienthi";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>Hienthi</h2>
+
+<div>
+    <h4>DichVu</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaDV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaDV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenDV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaDV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaDV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Sua", new { @MaDV = Model.MaDV }) |
+    @Html.ActionLink("Trở về", "DichVu")
+</p>

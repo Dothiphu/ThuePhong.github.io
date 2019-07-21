@@ -1,0 +1,89 @@
+﻿@using Template.Models;
+
+@using PagedList.Mvc;
+@model PagedList.PagedList<Template.Models.KhachHang>
+
+@{
+    ViewBag.Title = "KhachHang";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+@*<h2>KhachHang</h2>*@
+@*<p>
+    @Html.ActionLink("Thêm Mới", "ThemMoi")
+</p>*@
+@using (Html.BeginForm("TimKiem", "KhachHang", FormMethod.Post))
+{
+    <p>
+        Tên KH:@Html.TextBox("SearchString")
+        <input type="submit" value="Tìm kiếm" />
+    </p>
+}
+
+<p>
+    @Html.ActionLink("Thêm mới", "ThemMoi")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().TenKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Diachi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().SDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Nghenghiep)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().CMND)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diachi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nghenghiep)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CMND)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Sua", new {@MaKH=item.MaKH }) |
+            @Html.ActionLink("Hiển thị", "Hienthi", new { @MaKH = item.MaKH }) |
+            @Html.ActionLink("Xóa", "Xoa", new { @MaKH = item.MaKH })
+        </td>
+    </tr>
+}
+
+</table>
+@*Tao link lien ket cac trang*@
+Trang @(Model.PageCount < Model.PageNumber ? 0:Model.PageNumber)/@Model.PageCount
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("KhachHang", new { page=page}))
+
+</div>
+<style>
+    .MenuTrang li{
+        display:inline;
+    }
+</style>
+

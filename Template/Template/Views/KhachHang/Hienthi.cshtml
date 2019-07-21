@@ -1,0 +1,67 @@
+﻿@model Template.Models.KhachHang
+
+@{
+    ViewBag.Title = "Hienthi";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>Hienthi</h2>
+
+<div>
+    @*<h4>KhachHang</h4>
+	<hr />*@
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diachi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diachi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nghenghiep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nghenghiep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CMND)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CMND)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Sua", new { @MaKH =Model.MaKH }) |
+    @Html.ActionLink("Trở về", "KhachHang")
+</p>

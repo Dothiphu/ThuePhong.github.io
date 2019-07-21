@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Template.Models.DichVu>
+
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>TimKiem</h2>
+
+<p>
+    @Html.ActionLink("Thêm Mới", "ThemMoi")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaDV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenDV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaDV)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaDV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenDV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaDV)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Sua", new { @MaDV = item.MaDV }) |
+            @Html.ActionLink("Hiển thị", "Hienthi", new { @MaDV = item.MaDV }) |
+            @Html.ActionLink("Xóa", "Xoa", new { @MaDV = item.MaDV })
+        </td>
+    </tr>
+}
+
+</table>

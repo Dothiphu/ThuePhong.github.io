@@ -1,0 +1,59 @@
+﻿@model Template.Models.Phong
+
+@{
+    ViewBag.Title = "Hienthi";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>Hienthi</h2>
+
+<div>
+    <h4>Phong</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaPhong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenPhong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaPhong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DienTich)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DienTich)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Sua", new { @MaPhong = Model.MaPhong }) |
+    @Html.ActionLink("Trở về", "PhongTro")
+</p>

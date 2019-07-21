@@ -1,0 +1,65 @@
+﻿@model Template.Models.DangKyPhong
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>Xoa</h2>
+
+<h3>Bạn chắc chắn muốn xóa hóa đơn này?</h3>
+<div>
+    <h4>DangKyPhong</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaPhong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayBD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayBD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayKT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayKT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duyet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duyet)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "DangKyPhong")
+        </div>
+    }
+</div>

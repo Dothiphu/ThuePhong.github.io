@@ -53,3 +53,7 @@ C:\Users\Admin\Desktop\M\Template\Template\bin\Microsoft.Owin.Security.Microsoft
 C:\Users\Admin\Desktop\M\Template\Template\obj\Debug\Template.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Desktop\M\Template\Template\obj\Debug\Template.dll
 C:\Users\Admin\Desktop\M\Template\Template\obj\Debug\Template.pdb
+C:\Users\Admin\Desktop\M\Template\Template\bin\PagedList.dll
+C:\Users\Admin\Desktop\M\Template\Template\bin\PagedList.Mvc.dll
+C:\Users\Admin\Desktop\M\Template\Template\bin\PagedList.xml
+C:\Users\Admin\Desktop\M\Template\Template\bin\PagedList.Mvc.xml

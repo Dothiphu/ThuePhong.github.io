@@ -1,0 +1,68 @@
+﻿@model Template.Models.Phong
+
+@{
+    ViewBag.Title = "Sua";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>Sua</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Phong</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.MaPhong, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MaPhong)
+                @Html.ValidationMessageFor(model => model.MaPhong)
+            </div>
+        </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TenPhong, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TenPhong)
+                @Html.ValidationMessageFor(model => model.TenPhong)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.GiaPhong, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.GiaPhong)
+                @Html.ValidationMessageFor(model => model.GiaPhong)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TrangThai, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TrangThai)
+                @Html.ValidationMessageFor(model => model.TrangThai)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DienTich, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DienTich)
+                @Html.ValidationMessageFor(model => model.DienTich)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Trở về", "PhongTro")
+</div>

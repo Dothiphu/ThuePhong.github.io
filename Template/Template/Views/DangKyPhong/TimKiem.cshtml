@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Template.Models.DangKyPhong>
+
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>TimKiem</h2>
+
+<p>
+    @Html.ActionLink("Thêm Mới", "ThemMoi")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaPhong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayBD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayKT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duyet)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaPhong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayBD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayKT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Duyet)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Sua", new { @MaPhong = item.MaPhong }) |
+            @Html.ActionLink("Hiển thị", "Hienthi", new { @MaPhong = item.MaPhong }) |
+            @Html.ActionLink("Xóa", "Xoa", new { @MaPhong = item.MaPhong })
+        </td>
+    </tr>
+}
+
+</table>

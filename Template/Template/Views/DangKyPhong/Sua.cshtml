@@ -1,0 +1,68 @@
+﻿@model Template.Models.DangKyPhong
+
+@{
+    ViewBag.Title = "Sua";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>Sua</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>DangKyPhong</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaPhong, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MaPhong)
+                @Html.ValidationMessageFor(model => model.MaPhong)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaKH, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MaKH)
+                @Html.ValidationMessageFor(model => model.MaKH)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NgayBD, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NgayBD)
+                @Html.ValidationMessageFor(model => model.NgayBD)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NgayKT, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NgayKT)
+                @Html.ValidationMessageFor(model => model.NgayKT)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Duyet, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Duyet)
+                @Html.ValidationMessageFor(model => model.Duyet)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Sửa" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Trở về", "DangKyPhong")
+</div>

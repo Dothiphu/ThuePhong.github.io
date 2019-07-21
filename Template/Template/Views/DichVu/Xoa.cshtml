@@ -1,0 +1,49 @@
+﻿@model Template.Models.DichVu
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>Xoa</h2>
+
+<h3>Bạn chắc chắn muốn xóa dịch vụ này?</h3>
+<div>
+    <h4>DichVu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaDV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaDV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenDV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaDV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaDV)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "DichVu")
+        </div>
+    }
+</div>
