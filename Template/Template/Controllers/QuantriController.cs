@@ -29,7 +29,7 @@ namespace Template.Controllers
                 //    ModelState.AddModelError("", "Tên đăng nhập đã tồn tại");
                 //}
                 //chèn dữ liệu
-                db.User.Add(user);
+                db.Users.Add(user);
                 //Lưu vào cơ sở dữ liệu
                 db.SaveChanges();
             }
@@ -47,13 +47,12 @@ namespace Template.Controllers
             string sMatkhau = f.Get("txtMatkhau").ToString();
             User user = db.Users.SingleOrDefault(n => n.Username == sTaikhoan && n.Password == sMatkhau);
             if (user != null)
-            {
-                
-                
+            {               
                 Session["Taikhoan"] = user;
-                return RedirectToAction("Admin", "LayoutAdmin");              
+                Response.Redirect("");            
             }
             ViewBag.ThongBao = "Thất bại";
+            Response.Redirect("Dangnhap.cshtml");
             return View();
         }
     }

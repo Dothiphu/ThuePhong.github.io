@@ -13,7 +13,7 @@ namespace Template.Kiemtradangky
         QuanLiThuePhongEntities db = new QuanLiThuePhongEntities();
         public bool CheckUserName(string Username)
         {
-            return db.User.Count(x => x.Username == Username) > 0;
+            return db.Users.Count(x => x.Username == Username) > 0;
         }
     }
 }
