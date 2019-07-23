@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -172,13 +174,21 @@
     <Compile Include="Controllers\KhachHangController.cs" />
     <Compile Include="Controllers\LayoutNguoiDungController.cs" />
     <Compile Include="Controllers\PhongTroController.cs" />
+<<<<<<< HEAD
     <Compile Include="Controllers\QuanTriController.cs" />
     <Compile Include="Controllers\ThongKeController.cs" />
+=======
+    <Compile Include="Controllers\QuantriController.cs" />
+>>>>>>> 04afb7b195c1a7a21e6fcb2011a581b042345cbe
     <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Kiemtradangky\KiemtradangkyController.cs" />
+=======
+    <Compile Include="kiemtradangky\Kiemtradangky.cs" />
+>>>>>>> 04afb7b195c1a7a21e6fcb2011a581b042345cbe
     <Compile Include="Models\ChiTietDichVu.cs">
       <DependentUpon>QuanLiThuePhong.tt</DependentUpon>
     </Compile>
@@ -579,6 +589,7 @@
     <Content Include="Views\DichVu\Hienthi.cshtml" />
     <Content Include="Views\DichVu\Xoa.cshtml" />
     <Content Include="Views\DichVu\TimKiem.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\ThongKe\ThongKe.cshtml" />
     <Content Include="Views\ThongKe\ThemMoi.cshtml" />
     <Content Include="Views\PhongTro\ThemMoi.cshtml" />
@@ -587,6 +598,16 @@
     <Content Include="Views\ThongKe\Xoa.cshtml" />
     <Content Include="Views\QuanTri\DangKy.cshtml" />
     <Content Include="Views\QuanTri\Dangnhap.cshtml" />
+=======
+    <Content Include="Views\DangKyPhong\DangKyPhong.cshtml" />
+    <Content Include="Views\DangKyPhong\ThemMoi.cshtml" />
+    <Content Include="Views\DangKyPhong\Sua.cshtml" />
+    <Content Include="Views\DangKyPhong\Hienthi.cshtml" />
+    <Content Include="Views\DangKyPhong\Xoa.cshtml" />
+    <Content Include="Views\DangKyPhong\TimKiem.cshtml" />
+    <Content Include="Views\Quantri\DangKy.cshtml" />
+    <Content Include="Views\Quantri\DangNhap.cshtml" />
+>>>>>>> 04afb7b195c1a7a21e6fcb2011a581b042345cbe
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
