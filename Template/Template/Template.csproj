@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -171,10 +173,12 @@
     <Compile Include="Controllers\KhachHangController.cs" />
     <Compile Include="Controllers\LayoutNguoiDungController.cs" />
     <Compile Include="Controllers\PhongTroController.cs" />
+    <Compile Include="Controllers\QuantriController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="kiemtradangky\Kiemtradangky.cs" />
     <Compile Include="Models\ChiTietDichVu.cs">
       <DependentUpon>QuanLiThuePhongModel.tt</DependentUpon>
     </Compile>
@@ -573,6 +577,8 @@
     <Content Include="Views\DangKyPhong\Hienthi.cshtml" />
     <Content Include="Views\DangKyPhong\Xoa.cshtml" />
     <Content Include="Views\DangKyPhong\TimKiem.cshtml" />
+    <Content Include="Views\Quantri\DangKy.cshtml" />
+    <Content Include="Views\Quantri\DangNhap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
