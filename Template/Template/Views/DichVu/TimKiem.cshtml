@@ -5,13 +5,14 @@
     Layout = "~/Views/LayoutAdmin/Admin.cshtml";
 }
 
-<h2>TimKiem</h2>
+<h2>Tìm Kiếm</h2>
 
 <p>
-    @Html.ActionLink("Thêm Mới", "ThemMoi")
+    <button type="button" class="btn btn-primary">@Html.ActionLink("Thêm Mới", "ThemMoi")</button>
+    <button type="button" class="btn btn-success">@Html.ActionLink("Trở về", "DichVu")</button>
 </p>
-<table class="table">
-    <tr>
+<table class="table" border="1">
+    <tr style="background-color:#EEEEEE;">
         <th>
             @Html.DisplayNameFor(model => model.MaDV)
         </th>
@@ -21,7 +22,7 @@
         <th>
             @Html.DisplayNameFor(model => model.GiaDV)
         </th>
-        <th></th>
+        <th>Chức Năng</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -36,9 +37,9 @@
             @Html.DisplayFor(modelItem => item.GiaDV)
         </td>
         <td>
-            @Html.ActionLink("Sửa", "Sua", new { @MaDV = item.MaDV }) |
-            @Html.ActionLink("Hiển thị", "Hienthi", new { @MaDV = item.MaDV }) |
-            @Html.ActionLink("Xóa", "Xoa", new { @MaDV = item.MaDV })
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Sửa", "Sua", new { @MaDV = item.MaDV })</button> |
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Hiển thị", "Hienthi", new { @MaDV = item.MaDV })</button> |
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Xóa", "Xoa", new { @MaDV = item.MaDV })</button>
         </td>
     </tr>
 }

@@ -19,7 +19,7 @@ namespace Template.Models
             public string TenDV { get; set; }
             [Display(Name = "Giá DV")]
             [Required(ErrorMessage = "{0} không được bỏ trống")]
-            public string GiaDV { get; set; }
+            public Nullable<int> GiaDV { get; set; }
         }
     
     }

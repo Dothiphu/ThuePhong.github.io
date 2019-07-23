@@ -25,16 +25,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="index.html"><span>Metro</span></a>
+                <a class="brand" href="@Url.Action("Index","TrangChu")"><span>Cosy</span></a>
 
                 <!-- start: Header Menu -->
                 <div class="nav-no-collapse header-nav">
                     <ul class="nav pull-right">
                         <li class="dropdown hidden-phone">
                             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                                <i class="halflings-icon white warning-sign"></i>
+                                <i class="icon-bell"></i>
                             </a>
-                            <ul class="dropdown-menu notifications">
+                            @*<ul class="dropdown-menu notifications">
                                 <li class="dropdown-menu-title">
                                     <span>You have 11 notifications</span>
                                     <a href="#refresh"><i class="icon-repeat"></i></a>
@@ -112,10 +112,10 @@
                                 <li class="dropdown-menu-sub-footer">
                                     <a>View all notifications</a>
                                 </li>
-                            </ul>
+                            </ul>*@
                         </li>
                         <!-- start: Notifications Dropdown -->
-                        <li class="dropdown hidden-phone">
+                        @*<li class="dropdown hidden-phone">
                             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
                                 <i class="halflings-icon white tasks"></i>
                             </a>
@@ -173,14 +173,14 @@
                                     <a class="dropdown-menu-sub-footer">View all tasks</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li>*@
                         <!-- end: Notifications Dropdown -->
                         <!-- start: Message Dropdown -->
                         <li class="dropdown hidden-phone">
                             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
                                 <i class="halflings-icon white envelope"></i>
                             </a>
-                            <ul class="dropdown-menu messages">
+                            @*<ul class="dropdown-menu messages">
                                 <li class="dropdown-menu-title">
                                     <span>You have 9 messages</span>
                                     <a href="#refresh"><i class="icon-repeat"></i></a>
@@ -268,26 +268,26 @@
                                 <li>
                                     <a class="dropdown-menu-sub-footer">View all messages</a>
                                 </li>
-                            </ul>
+                            </ul>*@
                         </li>
                         <!-- end: Message Dropdown -->
-                        <li>
+                        @*<li>
                             <a class="btn" href="#">
                                 <i class="halflings-icon white wrench"></i>
                             </a>
-                        </li>
+                        </li>*@
                         <!-- start: User Dropdown -->
                         <li class="dropdown">
                             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                                <i class="halflings-icon white user"></i> Dennis Ji
+                                <i class="halflings-icon white user"></i>Tài khoản
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="dropdown-menu-title">
-                                    <span>Account Settings</span>
-                                </li>
-                                <li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
-                                <li><a href="login.html"><i class="halflings-icon off"></i> Logout</a></li>
+                                @*<li class="dropdown-menu-title">
+                                    <span>Tài khoản</span>
+                                </li>*@
+                                <li><a href="@Url.Action("Dangnhap","Quantri")"><i class="halflings-icon user"></i>Đăng nhập</a></li>
+                                <li><a href="@Url.Action("Dangky","Quantri")"><i class="halflings-icon off"></i>Đăng ký</a></li>
                             </ul>
                         </li>
                         <!-- end: User Dropdown -->
@@ -308,10 +308,12 @@
                 <div class="nav-collapse sidebar-nav">
                     <ul class="nav nav-tabs nav-stacked main-menu">
                         <li><a href="@Url.Action("Index","TrangChu")"><i class="icon-dashboard"></i><span class="hidden-tablet">Trang Chủ</span></a></li>
-                        <li><a href="@Url.Action("DangKyPhong","DangKyPhong")"><i class="icon-info-sign"></i><span class="hidden-tablet">Hợp Đồng</span></a></li>
+                       
                         <li><a href="@Url.Action("KhachHang","KhachHang")"><i class="icon-user"></i><span class="hidden-tablet">Khách Hàng</span></a></li>
                         <li><a href="@Url.Action("PhongTro","PhongTro")"><i class="icon-home"></i><span class="hidden-tablet">Phòng Trọ</span></a></li>
                         <li><a href="@Url.Action("DichVu","DichVu")"><i class="icon-tasks"></i><span class="hidden-tablet">Dịch Vụ</span></a></li>
+                        <li><a href="@Url.Action("DangKyPhong","DangKyPhong")"><i class="icon-info-sign"></i><span class="hidden-tablet">Hợp Đồng</span></a></li>
+                        @*<li><a href="@Url.Action("HoaDon","HoaDon")"><i class="icon-building"></i><span class="hidden-tablet">Hóa Đơn</span></a></li>*@
                         <li><a href="@Url.Action("ThongKe","ThongKe")"><i class="icon-eye-open"></i><span class="hidden-tablet">Thống Kê</span></a></li>
                         @*<li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Widgets</span></a></li>*@
                         @*<li>

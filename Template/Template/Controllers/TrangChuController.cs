@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using PagedList;
 using PagedList.Mvc;
+using Template.ViewModels;
+using Template.Models;
 
 namespace Template.Controllers
 {
@@ -16,5 +18,12 @@ namespace Template.Controllers
         {
             return View();
         }
+
+        //public ActionResult RegistrationRoom(DangKiPhongViewModel DkpViewModel)
+        //{
+        //    Phong phong = new Phong();
+
+        //    phong.DienTich = DkpViewModel.Phongs.DienTich;
+        //}
 	}
 }

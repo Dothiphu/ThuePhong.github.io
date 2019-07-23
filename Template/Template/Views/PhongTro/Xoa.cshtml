@@ -5,61 +5,55 @@
     Layout = "~/Views/LayoutAdmin/Admin.cshtml";
 }
 
-<h2>Xoa</h2>
+<h2>Xóa</h2>
 
-<h3>Bạn chắc chắn muốn xóa phòng này?</h3>
+<i style="color:red">Bạn chắc chắn muốn xóa phòng này?</i>
 <div>
-    <h4>Phong</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.MaPhong)
-        </dt>
+    <table border="1">
+        <tr class="dl-horizontal" style="background-color: #EEEEEE; color: white; width:100px">
+            <th>
+                @Html.DisplayNameFor(model => model.MaPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrangThai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DienTich)
+            </th>
 
-        <dd>
-            @Html.DisplayFor(model => model.MaPhong)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TenPhong)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TenPhong)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.GiaPhong)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.GiaPhong)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TrangThai)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TrangThai)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DienTich)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DienTich)
-        </dd>
-
-    </dl>
+        </tr>
+        <tr class="dl-horizontal">
+            <td>
+                @Html.DisplayFor(model => model.MaPhong)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TenPhong)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.GiaPhong)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TrangThai)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.DienTich)
+            </td>
+        </tr>
+    </table>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Xóa" class="btn btn-default" /> |
-            @Html.ActionLink("Trở về", "PhongTro")
+            <input type="submit" value="Xóa" class="btn btn-primary" /> |
+            <button type="button" class="btn btn-success btn-lg">@Html.ActionLink("Trở về", "PhongTro")</button>   
         </div>
     }
 </div>

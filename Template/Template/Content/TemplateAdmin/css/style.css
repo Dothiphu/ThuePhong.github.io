@@ -725,7 +725,7 @@ ul.messages li .message {
 }
 
 .breadcrumb a:hover {
-	color: #646464;
+	color: #ffffff;
 	text-shadow: 0px 1px 1px #fff;
 	text-decoration: none;	
 }
@@ -776,7 +776,7 @@ ul.messages li .message {
 
 	.statbox .footer {
 		background: rgba(0,0,0,.1);
-		background-color: #19FFFFFF;
+		background-color:#19FFFF;
 		position: absolute;
 		bottom: 0px;
 		left: 0px;

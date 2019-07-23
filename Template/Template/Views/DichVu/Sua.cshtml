@@ -1,5 +1,9 @@
 ﻿@model Template.Models.DichVu
-
+<style>
+    .text {
+        color: blue;
+    }
+</style>
 @{
     ViewBag.Title = "Sua";
     Layout = "~/Views/LayoutAdmin/Admin.cshtml";
@@ -11,8 +15,8 @@
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h4>DichVu</h4>
+    <form class="form-horizontal" role="form">
+        @*<h4>DichVu</h4>*@
         <hr />
         @Html.ValidationSummary(true)
         @*<div class="form-group">
@@ -24,7 +28,9 @@
         </div>*@
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TenDV, new { @class = "control-label col-md-2" })
+            <div class="text">
+                @Html.LabelFor(model => model.TenDV, new { @class = "control-label col-md-2" })
+            </div>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.TenDV)
                 @Html.ValidationMessageFor(model => model.TenDV)
@@ -32,21 +38,23 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.GiaDV, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.GiaDV)
-                @Html.ValidationMessageFor(model => model.GiaDV)
+            <div class="text">
+                @Html.LabelFor(model => model.GiaDV, new { @class = "control-label col-md-2" })
             </div>
-        </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.GiaDV)
+                    @Html.ValidationMessageFor(model => model.GiaDV)
+                </div>
+            </div>
 
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Sửa" class="btn btn-default" />
+            <div class="col-md-offset-2 col-md-10" >
+                <input type="submit" value="Sửa" class="btn btn-primary" /> |
+                <button type="button" class="btn btn-success btn-lg">@Html.ActionLink("Trở về", "DichVu")</button>
+                
             </div>
         </div>
-    </div>
+    </form>
 }
 
-<div>
-    @Html.ActionLink("Trở về", "DichVu")
-</div>
+

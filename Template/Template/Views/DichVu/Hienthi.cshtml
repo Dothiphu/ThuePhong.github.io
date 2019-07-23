@@ -5,39 +5,39 @@
     Layout = "~/Views/LayoutAdmin/Admin.cshtml";
 }
 
-<h2>Hienthi</h2>
+<h2>Hiển thị</h2>
 
 <div>
-    <h4>DichVu</h4>
-	<hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.MaDV)
-        </dt>
+    
+    <hr />
+    <table border="1">
+        <tr class="dl-horizontal" style="background-color: #DDDDDD; color: white; width:100px">
+            <th>
+                @Html.DisplayNameFor(model => model.MaDV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenDV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaDV)
+            </th>
+        </tr>
+        <tr class="dl-horizontal">
+            <td>
+                @Html.DisplayFor(model => model.MaDV)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TenDV)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.GiaDV)
+            </td>
 
-        <dd>
-            @Html.DisplayFor(model => model.MaDV)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TenDV)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TenDV)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.GiaDV)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.GiaDV)
-        </dd>
-
-    </dl>
+            </tr>
+        </table>
 </div>
+<br />
 <p>
-    @Html.ActionLink("Sửa", "Sua", new { @MaDV = Model.MaDV }) |
-    @Html.ActionLink("Trở về", "DichVu")
+    <button type="button" class="btn btn-primary btn-lg">@Html.ActionLink("Sửa", "Sua", new { @MaDV = Model.MaDV })</button> |
+    <button type="button" class="btn btn-success btn-lg">@Html.ActionLink("Trở về", "DichVu")</button>
 </p>

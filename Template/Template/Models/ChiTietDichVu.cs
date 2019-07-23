@@ -14,11 +14,15 @@ namespace Template.Models
     
     public partial class ChiTietDichVu
     {
-        public int MaDV { get; set; }
         public int MaPhong { get; set; }
+        public int MaDV { get; set; }
+        public Nullable<int> DonGia { get; set; }
+        public Nullable<int> SoLuong { get; set; }
+        public Nullable<int> ThanhTien { get; set; }
+        public Nullable<int> GiaPhong { get; set; }
+        public Nullable<int> TongTien { get; set; }
         public string NgayBD { get; set; }
         public string NgayKT { get; set; }
-        public Nullable<int> TongTien { get; set; }
     
         public virtual DichVu DichVu { get; set; }
         public virtual Phong Phong { get; set; }

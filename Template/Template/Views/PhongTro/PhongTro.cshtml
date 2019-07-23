@@ -8,22 +8,22 @@
     Layout = "~/Views/LayoutAdmin/Admin.cshtml";
 }
 
-<h2>PhongTro</h2>
-@*<p>
-    @Html.ActionLink("Thêm Mới", "ThemMoi")
-</p>*@
+<h2>Phòng Trọ</h2>
 @using (Html.BeginForm("TimKiem", "PhongTro", FormMethod.Post))
 {
-    <p>
-        Tên Phòng:@Html.TextBox("SearchString")
-        <input type="submit" value="Tìm kiếm" class="Timkiem" />
-    </p>
+     <form role="form">
+            <div class="form-group"> 
+                <input class="form-control" placeholder="Tên Phòng" @Html.TextBox("SearchString")>
+                <button type="submit" class="btn btn-primary">Tìm Kiếm</button>
+            </div>
+            
+        </form>
 }
 <p>
-    @Html.ActionLink("Thêm Mới", "ThemMoi")
+    <button type="button" class="btn btn-primary">@Html.ActionLink("Thêm Mới", "ThemMoi")</button>
 </p>
-<table class="table">
-    <tr>
+<table class="table" border="1">
+    <tr style="background-color: #EEEEEE">
         <th>
             @Html.DisplayNameFor(model => model.First().MaPhong)
         </th>
@@ -39,7 +39,7 @@
         <th>
             @Html.DisplayNameFor(model => model.First().DienTich)
         </th>
-        <th></th>
+        <th>Chức Năng</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -60,9 +60,9 @@
             @Html.DisplayFor(modelItem => item.DienTich)
         </td>
         <td>
-            @Html.ActionLink("Sửa", "Sua", new { @MaPhong = item.MaPhong}) |
-            @Html.ActionLink("Hiển thị", "Hienthi", new { @MaPhong = item.MaPhong }) |
-            @Html.ActionLink("Xóa", "Xoa", new { @MaPhong = item.MaPhong })
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Sửa", "Sua", new { @MaPhong = item.MaPhong })</button> |
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Hiển thị", "Hienthi", new { @MaPhong = item.MaPhong })</button> |
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Xóa", "Xoa", new { @MaPhong = item.MaPhong })</button>  
         </td>
     </tr>
 }

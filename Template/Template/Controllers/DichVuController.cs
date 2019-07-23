@@ -6,15 +6,15 @@ using System.Web.Mvc;
 using Template.Models;
 using PagedList;
 using PagedList.Mvc;
+
 namespace Template.Controllers
 {
-
     public class DichVuController : Controller
     {
-        QuanLiThuePhongEntities db = new QuanLiThuePhongEntities();
+        QuanLiThuePhongEntities1 db = new QuanLiThuePhongEntities1();
         //
         // GET: /DichVu/
-        public ActionResult DichVu(int ? page)
+        public ActionResult DichVu(int? page)
         {
             int pageNumber = (page ?? 1);
             int pageSize = 5;
@@ -70,7 +70,7 @@ namespace Template.Controllers
         {
 
             //lấy ra đối tượng khách hàng theo mã
-           DichVu dv = db.DichVus.SingleOrDefault(n => n.MaDV == MaDV);
+            DichVu dv = db.DichVus.SingleOrDefault(n => n.MaDV == MaDV);
             if (dv == null)
             {
                 Response.StatusCode = 404;
@@ -97,7 +97,7 @@ namespace Template.Controllers
         [HttpPost, ActionName("Xoa")]
         public ActionResult XacnhanXoa(int MaDV)
         {
-            DichVu dv = db.DichVus.SingleOrDefault(m => m.MaDV == MaDV);
+            DichVu dv = db.DichVus.SingleOrDefault(n => n.MaDV == MaDV);
             if (dv == null)
             {
                 Response.StatusCode = 404;
@@ -120,5 +120,5 @@ namespace Template.Controllers
 
             return View(links);
         }
-	}
+    }
 }

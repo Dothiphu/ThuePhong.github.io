@@ -13,7 +13,7 @@ namespace Template.Controllers
     {
         //
         // GET: /PhongTro/
-        QuanLiThuePhongEntities db = new QuanLiThuePhongEntities();
+        QuanLiThuePhongEntities1 db = new QuanLiThuePhongEntities1();
 
         //
         // GET: /KhachHang/

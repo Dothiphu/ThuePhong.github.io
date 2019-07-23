@@ -8,20 +8,21 @@
     Layout = "~/Views/LayoutAdmin/Admin.cshtml";
 }
 
-<h2>DangKyPhong</h2>
-@using (Html.BeginForm("TimKiem", "DangKyPhong", FormMethod.Post))
+<h2>Đăng Ký Phòng</h2>
+@*@using (Html.BeginForm("TimKiem", "DangKyPhong", FormMethod.Post))
 {
     <p>
         Phòng :@Html.TextBox("SearchString")
         <input type="submit" value="Tìm kiếm" />
     </p>
-}
+}*@
 
 <p>
-    @Html.ActionLink("Thêm Mới", "ThemMoi")
+   
+    <button type="button" class="btn btn-primary">@Html.ActionLink("Thêm Mới", "ThemMoi")</button>
 </p>
-<table class="table">
-    <tr>
+<table class="table" border="1">
+    <tr style="background-color: #EEEEEE">
         <th>
             @Html.DisplayNameFor(model => model.First().MaPhong)
         </th>
@@ -58,9 +59,9 @@
             @Html.DisplayFor(modelItem => item.Duyet)
         </td>
         <td>
-            @Html.ActionLink("Sửa", "Sua", new { @MaPhong=item.MaPhong }) |
-            @Html.ActionLink("Hiển thị", "Hienthi", new { @MaPhong = item.MaPhong }) |
-            @Html.ActionLink("Xóa", "Xoa", new { @MaPhong = item.MaPhong })
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Sửa", "Sua", new { @MaPhong = item.MaPhong })</button> |
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Hiển thị", "Hienthi", new { @MaPhong = item.MaPhong })</button> |
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Xóa", "Xoa", new { @MaPhong = item.MaPhong })</button>
         </td>
     </tr>
 }

@@ -27,7 +27,7 @@
 
 </head>
 <body>
- 
+ <div class="header" style="height:60px">
     <div class="site-wrap">
         <div class="site-mobile-menu">
             <div class="site-mobile-menu-header">
@@ -55,18 +55,18 @@
                                         <div class="d-inline-block d-lg-none  ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
                                         <ul class="site-menu js-clone-nav d-none d-lg-block">
                                             <li class="active">
-                                                <a href="index.html">Trang chủ</a>
+                                                <a href="@Url.Action("Index","TrangChu")">Trang chủ</a>
                                             </li>
-                                            <li class="has-children">
-                                                <a href="rooms.html">Phòng</a>
-                                                <ul class="dropdown arrow-top">
+                                            <li class="@*has-children*@">@Html.ActionLink("Phòng", "Index", "TrangChu")
+                                                <a href="#Phong"></a>
+                                                @*<ul class="dropdown arrow-top">
                                                     <li><a href="rooms.html">12m2</a></li>
                                                     <li><a href="rooms.html">15m2</a></li>
                                                     <li><a href="rooms.html">20m2</a></li>
                                                     <li><a href="rooms.html">23m2</a></li>
                                                     <li><a href="rooms.html">25m2</a></li>
                                                     <li><a href="rooms.html">30m2</a></li>
-                                                    @*<li class="has-children">
+                                                    <li class="has-children">
                                                             <a href="rooms.html">Rooms</a>
                                                             <ul class="dropdown">
                                                                 <li><a href="rooms.html">America</a></li>
@@ -75,17 +75,20 @@
                                                                 <li><a href="rooms.html">Africa</a></li>
 
                                                             </ul>
-                                                        </li>*@
-                                                </ul>
+                                                        </li>
+                                                </ul>*@
                                             </li>
-                                            <li><a href="dichvu.html">Dịch vụ</a></li>
-                                            <li class="taikhoan">
-                                                <a href="taikhoan.html">Tài khoản</a>
+                                            <li>@Html.ActionLink("Dịch Vụ", "Index", "TrangChu")
+                                            <a href="#DichVu"></a>
+                                            </li>
+                                            <li class="dangkyphong">
+                                                <a href="@Url.Action("DangKy", "DangKy")">Đăng ký phòng</a>
 
                                             </li>
-                                            <li><a href="lienhe.html">Liên hệ</a></li>
+                                            <li><a href="#Lienhe">Liên hệ</a></li>
                                             <li>
-                                                <a href="quantri.html">Quản trị</a>
+                                                <a href="@Url.Action("DangKy","QuanTri")">Quản trị</a>
+
 
                                             </li>
                                         </ul>
@@ -133,75 +136,75 @@
                 </div>
             </div>
         </div>
+    </div>
         <div id="NoiDung">
             @RenderBody()
         </div>
-        <footer class="site-footer">
-            <div class="container">
+     <footer class="site-footer" id="Lienhe">
+         <div class="container">
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3 class="footer-heading mb-4 text-white">Cosy</h3>
-                        <p>Chủ nhà:Nguyễn Văn An </p>
-                        <p>Địa chỉ: 87 Minh Khai - TP.Vinh - Nghệ An</p>
-                        <p>Điện thoại: 037.8635.808</p>
-                        <p>Email:dophu3196@gmail.com</p>
-                        <p>Cosy ấm áp và thoải mái như ở nhà !</p>
-                        @*<p><a href="#" class="btn btn-primary pill text-white px-4">Read More</a></p>*@
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3 class="footer-heading mb-4 text-white">Thông tin</h3>
-                                <ul class="list-unstyled">
-                                    <li><a href="#">Phòng</a></li>
-                                    <li><a href="#">Dịch vụ</a></li>
-                                    <li><a href="#">Approa</a></li>
-                                    <li><a href="#">Sustainability</a></li>
-                                    <li><a href="#">News</a></li>
-                                    <li><a href="#">Careers</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <h3 class="footer-heading mb-4 text-white">Ministries</h3>
-                                <ul class="list-unstyled">
-                                    <li><a href="#">Children</a></li>
-                                    <li><a href="#">Women</a></li>
-                                    <li><a href="#">Bible Study</a></li>
-                                    <li><a href="#">Church</a></li>
-                                    <li><a href="#">Missionaries</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+             <div class="row">
+                 <div class="col-lg-5">
+                     <h3 class="footer-heading mb-4 text-white">Cosy</h3>
+                     <p>Chủ nhà:Nguyễn Văn An </p>
+                     <p>Địa chỉ: 87 Minh Khai - TP.Vinh - Nghệ An</p>
+                     <p>Điện thoại: 037.8635.808</p>
+                     <p>Email:dophu3196@gmail.com</p>
+                     <p>Cosy ấm áp và thoải mái như ở nhà !</p>
+                     @*<p><a href="#" class="btn btn-primary pill text-white px-4">Read More</a></p>*@
+                 </div>
+                 @*<div class="col-md-6">
+                    <div class="row">*@
+                 <div class="col-lg-4">
+                     <h3 class="footer-heading mb-4 text-white">Thông tin</h3>
+                     <ul class="list-unstyled">
+                         <li><a href="#">Phòng</a></li>
+                         <li><a href="#">Dịch vụ</a></li>
+                         <li><a href="#">Hình ảnh</a></li>
+                         <li><a href="#">Chương trình</a></li>
+                         @*<li><a href="#">News</a></li>
+                            <li><a href="#">Careers</a></li>*@
+                     </ul>
+                 </div>
+                 @*<div class="col-md-6">
+                        <h3 class="footer-heading mb-4 text-white">Ministries</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Children</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Bible Study</a></li>
+                            <li><a href="#">Church</a></li>
+                            <li><a href="#">Missionaries</a></li>
+                        </ul>
+                    </div>*@
+                 @*</div>
+                    </div>*@
 
-                    <div class="col-md-2">
-                        <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Liên hệ</h3></div>
-                        <div class="col-md-12">
-                            <p>
-                                <a href="#" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
-                                <a href="#" class="p-2"><span class="icon-twitter"></span></a>
-                                <a href="#" class="p-2"><span class="icon-instagram"></span></a>
-                                <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row pt-5 mt-5 text-center">
+                 <div class="col-md-2">
+                     <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Liên hệ</h3></div>
+                     <div class="col-md-12">
+                         <p>
+                             <a href="https://www.facebook.com/yeng.con.7" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+                             <a href="https://www.instagram.com/yengcon/" class="p-2"><span class="icon-instagram"></span></a>
+                             <a href="https://myaccount.google.com/?tab=kk" class="p-2"><i class="icon-envelope"></i></a>
+                             <a href="https://join.skype.com/invite/w8KSj11BxPIf" class="p-2"><i class="icon-skype"></i></a>
+                         </p>
+                     </div>
+                 </div>
+             </div>
+             @*<div class="row pt-5 mt-5 text-center">
                     <div class="col-md-12">
-                        @*<p>
+                        <p>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;
                             <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
                             <script>document.write(new Date().getFullYear());</script> All Rights Reserved | This template is made with <i class="icon-heart text-primary" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>*@
+                        </p>
                     </div>
 
-                </div>
-            </div>
-        </footer>
-        
+                </div>*@
+         </div>
+     </footer>
        </div>
     <script src="~/Content/CssTrangChu/js/jquery-3.3.1.min.js"></script>
     <script src="~/Content/CssTrangChu/js/jquery-migrate-3.0.1.min.js"></script>

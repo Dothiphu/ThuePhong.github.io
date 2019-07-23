@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="45cb5480d1c94dc1a78e9ba07c1b5190" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanLiThuePhongModel.ChiTietDichVu" Width="1.5" PointX="3.625" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLiThuePhongModel.DangKyPhong" Width="1.5" PointX="6.625" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLiThuePhongModel.DichVu" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLiThuePhongModel.KhachHang" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLiThuePhongModel.Phong" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLiThuePhongModel.sysdiagram" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLiThuePhongModel.User" Width="1.5" PointX="2.75" PointY="8.625" IsExpanded="true" />
+        <AssociationConnector Association="QuanLiThuePhongModel.FK_ChiTietDichVu_DichVu" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLiThuePhongModel.FK_ChiTietDichVu_Phong" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLiThuePhongModel.FK_DangKyPhong_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLiThuePhongModel.FK_DangKyPhong_Phong" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

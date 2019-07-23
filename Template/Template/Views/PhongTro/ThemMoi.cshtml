@@ -1,31 +1,34 @@
 ﻿@model Template.Models.Phong
-
+<style>
+    .text {
+        color: blue;
+    }
+</style>
 @{
     ViewBag.Title = "ThemMoi";
     Layout = "~/Views/LayoutAdmin/Admin.cshtml";
 }
-
-<h2>ThemMoi</h2>
-
-@using (Html.BeginForm()) 
+<h2>Thêm Mới</h2>
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Phong</h4>
+    <form class="form-horizontal" role="form">
+        @*<h4>Phong</h4>*@
         <hr />
         @Html.ValidationSummary(true)
 
         @*<div class="form-group">
-            @Html.LabelFor(model => model.MaPhong, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.MaPhong)
-                @Html.ValidationMessageFor(model => model.MaPhong)
-            </div>
-        </div>*@
+                @Html.LabelFor(model => model.MaPhong, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.MaPhong)
+                    @Html.ValidationMessageFor(model => model.MaPhong)
+                </div>
+            </div>*@
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TenPhong, new { @class = "control-label col-md-2" })
+            <div class="text">
+                @Html.LabelFor(model => model.TenPhong, new { @class = "control-label col-md-2" })
+            </div>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.TenPhong)
                 @Html.ValidationMessageFor(model => model.TenPhong)
@@ -33,7 +36,9 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.GiaPhong, new { @class = "control-label col-md-2" })
+            <div class="text">
+                @Html.LabelFor(model => model.GiaPhong, new { @class = "control-label col-md-2" })
+            </div>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.GiaPhong)
                 @Html.ValidationMessageFor(model => model.GiaPhong)
@@ -41,7 +46,9 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TrangThai, new { @class = "control-label col-md-2" })
+            <div class="text">
+                @Html.LabelFor(model => model.TrangThai, new { @class = "control-label col-md-2" })
+            </div>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.TrangThai)
                 @Html.ValidationMessageFor(model => model.TrangThai)
@@ -49,7 +56,9 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DienTich, new { @class = "control-label col-md-2" })
+            <div class="text">
+                @Html.LabelFor(model => model.DienTich, new { @class = "control-label col-md-2" })
+            </div>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DienTich)
                 @Html.ValidationMessageFor(model => model.DienTich)
@@ -58,12 +67,9 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Thêm" class="btn btn-primary" /> |
+                <button type="button" class="btn btn-success btn-lg">@Html.ActionLink("Trở về", "PhongTro")</button>
             </div>
         </div>
-    </div>
+    </form>
 }
-
-<div>
-    @Html.ActionLink("Trở về", "PhongTro")
-</div>

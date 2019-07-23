@@ -11,7 +11,7 @@ namespace Template.Controllers
 {
     public class DangKyPhongController : Controller
     {
-        QuanLiThuePhongEntities db = new QuanLiThuePhongEntities();
+        QuanLiThuePhongEntities1 db = new QuanLiThuePhongEntities1();
         //
         // GET: /DangKyPhong/
         public ActionResult DangKyPhong(int ? page)
@@ -88,7 +88,7 @@ namespace Template.Controllers
         public ActionResult Xoa(int MaPhong)
         {
             //lấy ra đối tượng khách hàng theo mã
-         DangKyPhong dky= db.DangKyPhongs.SingleOrDefault(n => n.MaPhong == MaPhong);
+         DangKyPhong dky= db.DangKyPhongs.FirstOrDefault(n => n.MaPhong == MaPhong);
             if (dky == null)
             {
                 Response.StatusCode = 404;
@@ -101,7 +101,7 @@ namespace Template.Controllers
         [HttpPost, ActionName("Xoa")]
         public ActionResult XacnhanXoa(int MaPhong)
         {
-            DangKyPhong dky = db.DangKyPhongs.SingleOrDefault(n => n.MaPhong == MaPhong);
+            DangKyPhong dky = db.DangKyPhongs.FirstOrDefault(n => n.MaPhong == MaPhong);
             if (dky == null)
             {
                 Response.StatusCode = 404;
@@ -112,18 +112,18 @@ namespace Template.Controllers
             return RedirectToAction("DangKyPhong");
         }
         //Tìm kiếm
-        public ActionResult TimKiem(string SearchString)
-        {
-            var links = from l in db.DangKyPhongs
-                        join i in db.Phongs on l.MaPhong equals i.MaPhong
-                        select i;
+        //public ActionResult TimKiem(string SearchString)
+        //{
+        //    var links = from l in db.DangKyPhongs
+        //                join i in db.Phongs on l.MaPhong equals i.MaPhong
+        //                select i;
 
-            if (!String.IsNullOrEmpty(SearchString))
-            {
-                links = links.Where(s => s.TenPhong.Contains(SearchString));
-            }
+        //    if (!String.IsNullOrEmpty(SearchString))
+        //    {
+        //        links = links.Where(s => s.TenPhong.Contains(SearchString));
+        //    }
 
-            return View(links);
-        }
+        //    return View(links);
+        //}
 	}
 }

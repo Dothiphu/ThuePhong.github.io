@@ -11,7 +11,7 @@ namespace Template.Controllers
 {
     public class KhachHangController : Controller
     {
-        QuanLiThuePhongEntities db = new QuanLiThuePhongEntities();
+        QuanLiThuePhongEntities1 db = new QuanLiThuePhongEntities1();
      
         //
         // GET: /KhachHang/

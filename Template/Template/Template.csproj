@@ -166,57 +166,65 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\DangKyController.cs" />
     <Compile Include="Controllers\DangKyPhongController.cs" />
     <Compile Include="Controllers\DichVuController.cs" />
     <Compile Include="Controllers\KhachHangController.cs" />
     <Compile Include="Controllers\LayoutNguoiDungController.cs" />
     <Compile Include="Controllers\PhongTroController.cs" />
+    <Compile Include="Controllers\QuanTriController.cs" />
+    <Compile Include="Controllers\ThongKeController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Kiemtradangky\KiemtradangkyController.cs" />
     <Compile Include="Models\ChiTietDichVu.cs">
-      <DependentUpon>QuanLiThuePhongModel.tt</DependentUpon>
+      <DependentUpon>QuanLiThuePhong.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DangKyPhong.cs">
-      <DependentUpon>QuanLiThuePhongModel.tt</DependentUpon>
+      <DependentUpon>QuanLiThuePhong.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DichVu.cs">
-      <DependentUpon>QuanLiThuePhongModel.tt</DependentUpon>
+      <DependentUpon>QuanLiThuePhong.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KhachHang.cs">
-      <DependentUpon>QuanLiThuePhongModel.tt</DependentUpon>
+      <DependentUpon>QuanLiThuePhong.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Metadata\ChiTiet.metadata.cs" />
     <Compile Include="Models\Metadata\DangKyPhong.metadata.cs" />
     <Compile Include="Models\Metadata\DichVu.metadata.cs" />
     <Compile Include="Models\Metadata\KhachHang.metadata.cs" />
-    <Compile Include="Models\Metadata\PhongTro.metadata.cs" />
+    <Compile Include="Models\Metadata\Phong.metadata.cs" />
+    <Compile Include="Models\Metadata\ChiTietDichVu.metadata.cs" />
     <Compile Include="Models\Phong.cs">
-      <DependentUpon>QuanLiThuePhongModel.tt</DependentUpon>
+      <DependentUpon>QuanLiThuePhong.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\QuanLiThuePhongModel.Context.cs">
+    <Compile Include="Models\QuanLiThuePhong.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLiThuePhongModel.Context.tt</DependentUpon>
+      <DependentUpon>QuanLiThuePhong.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\QuanLiThuePhongModel.cs">
+    <Compile Include="Models\QuanLiThuePhong.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLiThuePhongModel.tt</DependentUpon>
+      <DependentUpon>QuanLiThuePhong.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\QuanLiThuePhongModel.Designer.cs">
+    <Compile Include="Models\QuanLiThuePhong.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLiThuePhongModel.edmx</DependentUpon>
+      <DependentUpon>QuanLiThuePhong.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>QuanLiThuePhongModel.tt</DependentUpon>
+      <DependentUpon>QuanLiThuePhong.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ThongKe.cs" />
     <Compile Include="Models\User.cs">
-      <DependentUpon>QuanLiThuePhongModel.tt</DependentUpon>
+      <DependentUpon>QuanLiThuePhong.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\DangKiPhongViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -447,7 +455,6 @@
     <Content Include="HinhAnh\k4.jpg" />
     <Content Include="HinhAnh\k5.jpg" />
     <Content Include="HinhAnh\k6.jpg" />
-    <Content Include="HinhAnh\q1.png" />
     <Content Include="HinhAnh\q2.jpg" />
     <Content Include="HinhAnh\q3.jpg" />
     <Content Include="HinhAnh\q4.jpg" />
@@ -458,15 +465,15 @@
     <Content Include="HinhAnh\r5.jpg" />
     <Content Include="HinhAnh\r6.jpg" />
     <Content Include="HinhAnh\g5.jpg" />
-    <Content Include="Models\QuanLiThuePhongModel.Context.tt">
+    <Content Include="Models\QuanLiThuePhong.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLiThuePhongModel.edmx</DependentUpon>
-      <LastGenOutput>QuanLiThuePhongModel.Context.cs</LastGenOutput>
+      <DependentUpon>QuanLiThuePhong.edmx</DependentUpon>
+      <LastGenOutput>QuanLiThuePhong.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\QuanLiThuePhongModel.tt">
+    <Content Include="Models\QuanLiThuePhong.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLiThuePhongModel.edmx</DependentUpon>
-      <LastGenOutput>QuanLiThuePhongModel.cs</LastGenOutput>
+      <DependentUpon>QuanLiThuePhong.edmx</DependentUpon>
+      <LastGenOutput>QuanLiThuePhong.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -480,13 +487,6 @@
     <Content Include="Content\CssTrangChu\fonts\icomoon\fonts\icomoon.ttf" />
     <Content Include="Content\CssTrangChu\fonts\icomoon\fonts\icomoon.woff" />
     <Content Include="Content\CssTrangChu\fonts\icomoon\selection.json" />
-    <EntityDeploy Include="Models\QuanLiThuePhongModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QuanLiThuePhongModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\QuanLiThuePhongModel.edmx.diagram">
-      <DependentUpon>QuanLiThuePhongModel.edmx</DependentUpon>
-    </Content>
     <Content Include="Content\TemplateAdmin\font\fontawesome-webfont-0.eot" />
     <Content Include="Content\TemplateAdmin\font\fontawesome-webfont-62877.eot" />
     <Content Include="Content\TemplateAdmin\font\fontawesome-webfont-62877.ttf" />
@@ -521,6 +521,13 @@
     <Content Include="Content\font-awesome\scss\_mixins.scss" />
     <Content Include="Content\font-awesome\scss\_path.scss" />
     <Content Include="Content\font-awesome\scss\_variables.scss" />
+    <EntityDeploy Include="Models\QuanLiThuePhong.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLiThuePhong.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\QuanLiThuePhong.edmx.diagram">
+      <DependentUpon>QuanLiThuePhong.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -556,26 +563,34 @@
     <Content Include="Views\KhachHang\Xoa.cshtml" />
     <Content Include="Views\KhachHang\TimKiem.cshtml" />
     <Content Include="Views\PhongTro\PhongTro.cshtml" />
-    <Content Include="Views\PhongTro\ThemMoi.cshtml" />
     <Content Include="Views\PhongTro\Sua.cshtml" />
     <Content Include="Views\PhongTro\Hienthi.cshtml" />
     <Content Include="Views\PhongTro\Xoa.cshtml" />
     <Content Include="Views\PhongTro\TimKiem.cshtml" />
+    <Content Include="Views\DangKyPhong\DangKyPhong.cshtml" />
+    <Content Include="Views\DangKyPhong\ThemMoi.cshtml" />
+    <Content Include="Views\DangKyPhong\Sua.cshtml" />
+    <Content Include="Views\DangKyPhong\Hienthi.cshtml" />
+    <Content Include="Views\DangKyPhong\Xoa.cshtml" />
+    <Content Include="Views\DangKy\DangKy.cshtml" />
     <Content Include="Views\DichVu\DichVu.cshtml" />
     <Content Include="Views\DichVu\ThemMoi.cshtml" />
     <Content Include="Views\DichVu\Sua.cshtml" />
     <Content Include="Views\DichVu\Hienthi.cshtml" />
     <Content Include="Views\DichVu\Xoa.cshtml" />
     <Content Include="Views\DichVu\TimKiem.cshtml" />
-    <Content Include="Views\DangKyPhong\DangKyPhong.cshtml" />
-    <Content Include="Views\DangKyPhong\ThemMoi.cshtml" />
-    <Content Include="Views\DangKyPhong\Sua.cshtml" />
-    <Content Include="Views\DangKyPhong\Hienthi.cshtml" />
-    <Content Include="Views\DangKyPhong\Xoa.cshtml" />
-    <Content Include="Views\DangKyPhong\TimKiem.cshtml" />
+    <Content Include="Views\ThongKe\ThongKe.cshtml" />
+    <Content Include="Views\ThongKe\ThemMoi.cshtml" />
+    <Content Include="Views\PhongTro\ThemMoi.cshtml" />
+    <Content Include="Views\ThongKe\Sua.cshtml" />
+    <Content Include="Views\ThongKe\Hienthi.cshtml" />
+    <Content Include="Views\ThongKe\Xoa.cshtml" />
+    <Content Include="Views\QuanTri\DangKy.cshtml" />
+    <Content Include="Views\QuanTri\Dangnhap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Kiemtradangky\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

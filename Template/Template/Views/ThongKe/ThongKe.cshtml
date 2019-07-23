@@ -1,0 +1,97 @@
+﻿@using Template.Models;
+
+@using PagedList.Mvc;
+@model PagedList.PagedList<Template.Models.ChiTietDichVu>
+
+@{
+    ViewBag.Title = "ThongKe";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>Thống Kê</h2>
+
+<p>
+    <button type="button" class="btn btn-primary">@Html.ActionLink("Thêm Mới", "ThemMoi")</button>
+    
+</p>
+<table class="table" border="1">
+    <tr style="background-color:#EEEEEE">
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaPhong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaDV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().DonGia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().SoLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().ThanhTien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().GiaPhong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().TongTien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().NgayBD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().NgayKT)
+        </th>
+        <th>Chức Năng</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaPhong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaDV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonGia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThanhTien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaPhong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TongTien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayBD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayKT)
+        </td>
+        <td>
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Sửa", "Sua", new { @MaPhong = item.MaPhong })</button> |
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Hiển thị", "Hienthi", new { @MaPhong = item.MaPhong })</button> |
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Xóa", "Xoa", new { @MaPhong = item.MaPhong })</button>  
+        </td>
+    </tr>
+}
+
+</table>
+@*Tao link lien ket cac trang*@
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("ThongKe", new { page = page }))
+
+</div>
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>

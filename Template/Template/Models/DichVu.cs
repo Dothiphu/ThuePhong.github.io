@@ -21,7 +21,7 @@ namespace Template.Models
     
         public int MaDV { get; set; }
         public string TenDV { get; set; }
-        public string GiaDV { get; set; }
+        public Nullable<int> GiaDV { get; set; }
     
         public virtual ICollection<ChiTietDichVu> ChiTietDichVus { get; set; }
     }
