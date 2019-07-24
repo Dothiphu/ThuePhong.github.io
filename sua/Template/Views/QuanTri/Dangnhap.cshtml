@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Dangnhap";
+    Layout = "~/Views/Layout1/_LayoutPage1.cshtml";
+}
+<style>
+    form{
+        margin:10px;
+    }
+    h2 {
+        font-family: "Times New Roman", Times, serif;
+        color: #999999;
+        margin-left: 40%;
+        margin-top: 20px;
+    }
+    label{
+        color:blue;
+    }
+</style>
+<h2>Đăng Nhập</h2>
+<i style="color:red">@ViewBag.ThongBao</i>
+@using (Html.BeginForm())
+{ 
+    <form role="form">
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" name="txtTaikhoan">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="txtMatkhau">
+        </div>
+        <button type="submit" class="btn btn-primary" id="Submit" name="btnSubmit">Đăng nhập</button>
+    </form>
+}
+

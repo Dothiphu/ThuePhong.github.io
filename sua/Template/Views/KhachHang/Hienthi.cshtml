@@ -1,0 +1,62 @@
+﻿@model Template.Models.KhachHang
+
+@{
+    ViewBag.Title = "Hienthi";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>Hiển Thị</h2>
+
+<div>
+    @*<h4>KhachHang</h4>
+	<hr />*@
+    <table border="1">
+        <tr class="dl-horizontal" style="background-color: #EEEEEE; color: white; width:100px">
+            <th>
+                @Html.DisplayNameFor(model => model.MaKH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenKH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Diachi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SDT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nghenghiep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CMND)
+            </th>
+        </tr>
+        <tr class="dl-horizontal">
+            <td>
+                @Html.DisplayFor(model => model.MaKH)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TenKH)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Diachi)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.SDT)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Nghenghiep)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.CMND)
+            </td>
+
+        </tr>
+    </table>
+</div>
+<br />
+<p>
+    <button type="button" class="btn btn-primary btn-lg">@Html.ActionLink("Sửa", "Sua", new { @MaKH = Model.MaKH })</button> |
+    <button type="button" class="btn btn-success btn-lg">@Html.ActionLink("Trở về", "KhachHang")</button>
+</p>
+

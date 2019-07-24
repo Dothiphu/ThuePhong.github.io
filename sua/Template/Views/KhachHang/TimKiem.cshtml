@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Template.Models.KhachHang>
+
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>Tìm Kiếm</h2>
+
+<p>
+    <button type="button" class="btn btn-primary">@Html.ActionLink("Thêm Mới", "ThemMoi")</button> |
+    <button type="button" class="btn btn-success">@Html.ActionLink("Trở về", "KhachHang")</button>
+</p>
+<table class="table" border="1">
+    <tr style="background-color:#EEEEEE">
+        <th>
+            @Html.DisplayNameFor(model => model.MaKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Diachi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nghenghiep)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CMND)
+        </th>
+        <th>Chức Năng</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diachi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nghenghiep)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CMND)
+        </td>
+        <td>
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Sửa", "Sua", new { @MaKH = item.MaKH })</button> |
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Hiển thị", "Hienthi", new { @MaKH = item.MaKH })</button> |
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Xóa", "Xoa", new { @MaKH = item.MaKH })</button>
+        </td>
+    </tr>
+}
+
+</table>

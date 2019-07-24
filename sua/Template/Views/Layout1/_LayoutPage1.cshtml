@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Layout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link href="~/Content/CssTrangChu/CssTrangChu.css" rel="stylesheet" />
+    <link href="~/Content/CssTrangChu/fonts/icomoon/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/CssTrangChu/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="~/Content/CssTrangChu/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/CssTrangChu/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/Content/CssTrangChu/css/jquery-ui.css">
+    <link rel="stylesheet" href="~/Content/CssTrangChu/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/CssTrangChu/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/Content/CssTrangChu/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="~/Content/CssTrangChu/css/animate.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+
+
+
+    <link rel="stylesheet" href="~/Content/CssTrangChu/fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="~/Content/CssTrangChu/css/aos.css">
+    <link rel="stylesheet" href="~/Content/CssTrangChu/css/style.css">
+
+</head>
+<body>
+ <div class="header" style="height:60px">
+    <div class="site-wrap">
+        <div class="site-mobile-menu">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div> <!-- .site-mobile-menu -->
+
+
+        <div class="site-navbar-wrap js-site-navbar bg-white">
+
+            <div class="container">
+                <div class="site-navbar bg-light">
+                    <div class="py-1">
+                        <div class="row align-items-center">
+                            <div class="col-2">
+                                <h2 class="mb-0 site-logo"><a href="index.html">Cosy</a></h2>
+                            </div>
+                            <div class="col-10">
+                                <nav class="site-navigation text-right" role="navigation">
+                                    <div class="container">
+
+                                        <div class="d-inline-block d-lg-none  ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
+                                        <ul class="site-menu js-clone-nav d-none d-lg-block">
+                                            <li class="active">
+                                                <a href="@Url.Action("Index","TrangChu")">Trang chủ</a>
+                                            </li>
+                                            <li class="@*has-children*@">@Html.ActionLink("Phòng", "Index", "TrangChu")
+                                                <a href="#Phong"></a>
+                                                @*<ul class="dropdown arrow-top">
+                                                    <li><a href="rooms.html">12m2</a></li>
+                                                    <li><a href="rooms.html">15m2</a></li>
+                                                    <li><a href="rooms.html">20m2</a></li>
+                                                    <li><a href="rooms.html">23m2</a></li>
+                                                    <li><a href="rooms.html">25m2</a></li>
+                                                    <li><a href="rooms.html">30m2</a></li>
+                                                    <li class="has-children">
+                                                            <a href="rooms.html">Rooms</a>
+                                                            <ul class="dropdown">
+                                                                <li><a href="rooms.html">America</a></li>
+                                                                <li><a href="rooms.html">Europe</a></li>
+                                                                <li><a href="rooms.html">Asia</a></li>
+                                                                <li><a href="rooms.html">Africa</a></li>
+
+                                                            </ul>
+                                                        </li>
+                                                </ul>*@
+                                            </li>
+                                            <li>@Html.ActionLink("Dịch Vụ", "Index", "TrangChu")
+                                            <a href="#DichVu"></a>
+                                            </li>
+                                            <li class="dangkyphong">
+                                                <a href="@Url.Action("DangKy", "DangKy")">Đăng ký phòng</a>
+
+                                            </li>
+                                            <li><a href="#Lienhe">Liên hệ</a></li>
+                                            <li>
+                                                <a href="@Url.Action("DangKy","QuanTri")">Quản trị</a>
+
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="slide-one-item home-slider owl-carousel">
+
+            <div class="site-blocks-cover overlay" style="background-image: url(../HinhAnh/3.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-7 text-center" data-aos="fade">
+
+                            <h1 class="mb-2">Welcome To Cosy</h1>
+                            <h2 class="caption">Warm &amp; Comfy</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-blocks-cover overlay" style="background-image: url(../HinhAnh/2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-7 text-center" data-aos="fade">
+                            <h1 class="mb-2">Sweet</h1>
+                            <h2 class="caption">Warm &amp; Comfy</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-blocks-cover overlay" style="background-image: url(../HinhAnh/1.png);" data-aos="fade" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-7 text-center" data-aos="fade">
+                            <h1 class="mb-2">Beautiful</h1>
+                            <h2 class="caption">Warm &amp; Comfy</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div id="NoiDung">
+            @RenderBody()
+        </div>
+     <footer class="site-footer" id="Lienhe">
+         <div class="container">
+
+             <div class="row">
+                 <div class="col-lg-5">
+                     <h3 class="footer-heading mb-4 text-white">Cosy</h3>
+                     <p>Chủ nhà:Nguyễn Văn An </p>
+                     <p>Địa chỉ: 87 Minh Khai - TP.Vinh - Nghệ An</p>
+                     <p>Điện thoại: 037.8635.808</p>
+                     <p>Email:dophu3196@gmail.com</p>
+                     <p>Cosy ấm áp và thoải mái như ở nhà !</p>
+                     @*<p><a href="#" class="btn btn-primary pill text-white px-4">Read More</a></p>*@
+                 </div>
+                 @*<div class="col-md-6">
+                    <div class="row">*@
+                 <div class="col-lg-4">
+                     <h3 class="footer-heading mb-4 text-white">Thông tin</h3>
+                     <ul class="list-unstyled">
+                         <li><a href="#">Phòng</a></li>
+                         <li><a href="#">Dịch vụ</a></li>
+                         <li><a href="#">Hình ảnh</a></li>
+                         <li><a href="#">Chương trình</a></li>
+                         @*<li><a href="#">News</a></li>
+                            <li><a href="#">Careers</a></li>*@
+                     </ul>
+                 </div>
+                 @*<div class="col-md-6">
+                        <h3 class="footer-heading mb-4 text-white">Ministries</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Children</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Bible Study</a></li>
+                            <li><a href="#">Church</a></li>
+                            <li><a href="#">Missionaries</a></li>
+                        </ul>
+                    </div>*@
+                 @*</div>
+                    </div>*@
+
+                 <div class="col-md-2">
+                     <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Liên hệ</h3></div>
+                     <div class="col-md-12">
+                         <p>
+                             <a href="https://www.facebook.com/yeng.con.7" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+                             <a href="https://www.instagram.com/yengcon/" class="p-2"><span class="icon-instagram"></span></a>
+                             <a href="https://myaccount.google.com/?tab=kk" class="p-2"><i class="icon-envelope"></i></a>
+                             <a href="https://join.skype.com/invite/w8KSj11BxPIf" class="p-2"><i class="icon-skype"></i></a>
+                         </p>
+                     </div>
+                 </div>
+             </div>
+             @*<div class="row pt-5 mt-5 text-center">
+                    <div class="col-md-12">
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                            <script>document.write(new Date().getFullYear());</script> All Rights Reserved | This template is made with <i class="icon-heart text-primary" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+
+                </div>*@
+         </div>
+     </footer>
+       </div>
+    <script src="~/Content/CssTrangChu/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/CssTrangChu/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="~/Content/CssTrangChu/js/jquery-ui.js"></script>
+    <script src="~/Content/CssTrangChu/js/popper.min.js"></script>
+    <script src="~/Content/CssTrangChu/js/bootstrap.min.js"></script>
+    <script src="~/Content/CssTrangChu/js/owl.carousel.min.js"></script>
+    <script src="~/Content/CssTrangChu/js/jquery.stellar.min.js"></script>
+    <script src="~/Content/CssTrangChu/js/jquery.countdown.min.js"></script>
+    <script src="~/Content/CssTrangChu/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Content/CssTrangChu/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/Content/CssTrangChu/js/aos.js"></script>
+
+    <script src="~/Content/CssTrangChu/js/mediaelement-and-player.min.js"></script>
+    <script src="~/Content/CssTrangChu/js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
+
+            for (var i = 0; i < total; i++) {
+                new MediaElementPlayer(mediaElements[i], {
+                    pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
+                    shimScriptAccess: 'always',
+                    success: function () {
+                        var target = document.body.querySelectorAll('.player'), targetTotal = target.length;
+                        for (var j = 0; j < targetTotal; j++) {
+                            target[j].style.visibility = 'visible';
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    </body>
+</html>

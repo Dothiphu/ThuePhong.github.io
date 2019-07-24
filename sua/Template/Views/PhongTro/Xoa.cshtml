@@ -1,0 +1,59 @@
+﻿@model Template.Models.Phong
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>Xóa</h2>
+
+<i style="color:red">Bạn chắc chắn muốn xóa phòng này?</i>
+<div>
+    <hr />
+    <table border="1">
+        <tr class="dl-horizontal" style="background-color: #EEEEEE; color: white; width:100px">
+            <th>
+                @Html.DisplayNameFor(model => model.MaPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrangThai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DienTich)
+            </th>
+
+        </tr>
+        <tr class="dl-horizontal">
+            <td>
+                @Html.DisplayFor(model => model.MaPhong)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TenPhong)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.GiaPhong)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TrangThai)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.DienTich)
+            </td>
+        </tr>
+    </table>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-primary" /> |
+            <button type="button" class="btn btn-success btn-lg">@Html.ActionLink("Trở về", "PhongTro")</button>   
+        </div>
+    }
+</div>

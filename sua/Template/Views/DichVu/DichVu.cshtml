@@ -1,0 +1,72 @@
+﻿@using Template.Models;
+
+@using PagedList.Mvc;
+@model PagedList.PagedList<Template.Models.DichVu>
+
+@{
+    ViewBag.Title = "DichVu";
+    Layout = "~/Views/LayoutAdmin/Admin.cshtml";
+}
+
+<h2>DichVu</h2>
+@using (Html.BeginForm("TimKiem", "DichVu", FormMethod.Post))
+{
+    
+        <form role="form">
+            <div class="form-group"> 
+                <input class="form-control" placeholder="Tên DV" @Html.TextBox("SearchString")>
+                <button type="submit" class="btn btn-primary">Tìm Kiếm</button>
+            </div>
+            
+        </form>
+          
+}
+<p>
+    <button type="button" class="btn btn-primary">@Html.ActionLink("Thêm Mới", "ThemMoi")</button>
+   
+</p>
+<table class="table" border="1">
+    <tr style="background-color: #EEEEEE">
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaDV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().TenDV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().GiaDV)
+        </th>
+        <th>Chức năng</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaDV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenDV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaDV)
+        </td>
+        <td>
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Sửa", "Sua", new { @MaDV = item.MaDV })</button> |
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Hiển thị", "Hienthi", new { @MaDV = item.MaDV })</button> |
+            <button type="submit" class="btn btn-primary">@Html.ActionLink("Xóa", "Xoa", new { @MaDV = item.MaDV })</button>
+        </td>
+    </tr>
+}
+
+</table>
+@*Tao link lien ket cac trang*@
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("DichVu", new { page = page }))
+
+</div>
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>
