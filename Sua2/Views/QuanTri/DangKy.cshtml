@@ -1,0 +1,107 @@
+﻿@model Template.Models.User
+<style>
+    .text{
+        color:blue;
+    }
+    h2 {
+        font-family: "Times New Roman", Times, serif;
+        color: #555555 ;
+        margin-left: 120px;
+        margin-top: 5px;
+    }
+    input, #Username.text-box.single-line {
+        width: 300px;
+        border-radius: 7px;
+        margin-left: 40%;
+    }
+    input, #Password.text-box.single-line {
+        width: 300px;
+        border-radius: 7px;
+        margin-left: 40%;
+    }
+    input, #Fullname.text-box.single-line {
+        width: 300px;
+        border-radius: 7px;
+        margin-left: 40%;
+    }
+    input, .btn.btn-success {
+        width: 120px;
+    }
+    button, .btn.btn-default {
+        width: 120px;
+    }
+    label, .control-label.col-md-2 {
+        margin-left: 32%;
+        color: white;
+    }
+    .form-horizontal {
+        background-image: url(../HinhAnh/bg1.jpg);
+        height:400px;
+        /*background-repeat: no-repeat;
+        opacity: 0.2;*/
+        /*filter: alpha(opacity=50);*/
+    }
+    .site-footer:before {
+        height: 350px;
+    }
+    div.content{
+        padding-top:80px;
+    }
+  
+</style>
+<div class="form-horizontal">   
+    @{
+        ViewBag.Title = "DangKy";
+        Layout = "~/Views/Layout1/_LayoutPage1.cshtml";
+    }  
+    
+    <i style="color:red">@ViewBag.ThongBao</i>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <hr />
+        <div class="content">
+        <div class="form-group">
+            <div class="text">
+                @Html.LabelFor(model => model.Username, new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Username)
+                @Html.ValidationMessageFor(model => model.Username)
+            </div>
+        </div>
+        
+          <div class="form-group">
+            <div class="text">
+                @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password)
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="text">
+                @Html.LabelFor(model => model.Fullname, new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Fullname)
+                @Html.ValidationMessageFor(model => model.Fullname)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Đăng Ký" class="btn btn-success" />
+                <button type="button" class="btn btn-default">@Html.ActionLink("Đăng nhập", "Dangnhap")</button>
+            </div>
+        </div>
+            </div>
+    }
+    </div>
+    
+    
+
+

@@ -1,0 +1,29 @@
+﻿body {
+}
+/*col-md-6 col-lg-4 mb-5 .hotel-room text-center .d-block mb-0 thumbnail img{
+    height:150px;
+    width:100px;
+}*/
+.img-fluid{
+    /*height:150px;*/
+    width:400px;
+}
+.map-container{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+@media (min-width: 768px) {
+    .site-section {
+        padding-top: 1rem;
+    }
+}
+

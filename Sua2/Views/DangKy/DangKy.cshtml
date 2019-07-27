@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Layout1/_LayoutPage1.cshtml";
+}
+<style>
+    form h2 {
+        font-family: "Arial Black", Gadget, sans-serif;
+        color: #999999;
+         padding-left: 20%;
+        padding-top: 20px;
+    }
+    .col-lg-5 label {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000077;
+    }
+  
+</style>
+
+
+<form role="form" style="padding-left:170px;padding-bottom:10px">
+    <h2>Đăng Ký Phòng</h2>
+    <div class="form-group">  
+        <div class="row">
+            <div class="col-lg-5">
+                <label for="exampleInputEmail1">Họ Tên: </label>
+                <input type="text" class="form-control" id="exampleInputHoTen" placeholder="Họ tên">
+            </div>
+            <div class="col-lg-5">
+                <label for="exampleInputPassword1">Quê quán:</label>
+                <input type="text" class="form-control" id="exampleInputQueQuan" placeholder="Quê quán">
+            </div>
+        </div>
+     </div>
+    <div class="form-group">       
+        <div class="row">
+            <div class="col-lg-5">
+                <label for="exampleInputPassword1">Số Điện Thoại:</label>
+                <input type="text" class="form-control" id="exampleInputSDT" placeholder="SDT">
+            </div>
+            <div class="col-lg-5">
+                <label for="exampleInputPassword1">Nghề Nghiệp:</label>
+                <input type="text" class="form-control" id="exampleInputNgheNghiep" placeholder="Nghề nghiệp">
+            </div>
+            </div>
+        </div>
+    <div class="form-group">
+        
+        <div class="row">
+            <div class="col-lg-5">
+                <label for="exampleInputPassword1">Số CMND:</label>
+                <input type="text" class="form-control" id="exampleInputCMND" placeholder="CMND">
+            </div>
+            <div class="col-lg-5">
+                <label for="disabledSelect">Diện Tích Phòng:</label>
+                <select id="disabledSelect" class="form-control">
+                    <option>12m2</option>
+                    <option>15m2</option>
+                    <option>20m2</option>
+                    <option>23m2</option>
+                    <option>25m2</option>
+                    <option>30m2</option>
+                </select>
+            </div>
+           
+        </div>
+    </div>     
+    <div class="form-group">
+
+        <div class="row">
+            <div class="col-lg-5">
+                <label for="exampleInputPassword1">Ngày Bắt Đầu:</label>
+                <input type="text" class="form-control" id="exampleInputNgayBD" placeholder="Ngày/Tháng/Năm">
+            </div>
+            <div class="col-lg-5">
+                <label for="exampleInputPassword1">Ngày Kết Thúc:</label>
+                <input type="text" class="form-control" id="exampleInputNgayKT" placeholder="Ngày/Tháng/Năm">
+            </div>
+        </div>
+    </div>     
+    <div class="form-group">
+       
+        <div class="row">
+            <div class="col-lg-5">
+                <label for="exampleInputPassword1">Giới Tính:</label>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">Nam
+                    </label>
+                    <label>
+                        <input type="checkbox">Nữ
+                    </label>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <label for="exampleInputPassword1">Dịch Vụ:</label>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">Điện
+                    </label>
+                    <label>
+                        <input type="checkbox">Nước
+                    </label>
+                    <label>
+                        <input type="checkbox">Wifi
+                    </label>
+                    <label>
+                        <input type="checkbox">Điều Hòa
+                    </label>
+                </div>
+            </div>
+         </div>
+     </div>
+           
+   
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-5">
+                <label for="exampleInputFile">Ảnh cá nhân</label><br />
+                <input type="file" id="exampleInputFile">
+            </div>
+            </div>
+                @*<p class="help-block">Example block-level help text here.</p>*@
+            </div>
+            @*<div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Check me out
+                    </label>
+                </div>*@
+    <button type="button" class="btn btn-primary btn-lg" style="background-color: #3366CC; border:#3366CC;">Đăng Ký</button>
+</form>
+

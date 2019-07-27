@@ -1,0 +1,60 @@
+﻿
+
+<style>
+    form{
+        margin:10px;
+    }
+    h2 {
+        font-family: "Times New Roman", Times, serif;
+        color: #999999;
+        margin-left: 40%;
+        margin-top: 20px;
+    }
+    label{
+        color:white;
+    }
+    .background {
+        background-image: url(../HinhAnh/bg1.jpg);
+    }
+    form{
+        padding-top:120px;
+        padding-left:30%;
+        height:400px;
+
+    }
+    input, .form-control{
+        width:350px;
+        height:40px;
+    }
+    button, #submit.btn.btn-primary{
+        width:100px;
+    }
+    .site-footer:before{
+        height:350px;
+    }
+</style>
+<div class="background">
+@{
+    ViewBag.Title = "Dangnhap";
+    Layout = "~/Views/Layout1/_LayoutPage1.cshtml";
+
+}
+<i style="color:red">@ViewBag.ThongBao</i>
+@using (Html.BeginForm())
+{ 
+    <form role="form">
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" name="txtTaikhoan">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="txtMatkhau">
+        </div>
+        <button type="submit" class="btn btn-primary" id="Submit" name="btnSubmit">Đăng nhập</button>
+    
+        @*<button type="button" class="btn btn-default">@Html.ActionLink("Đăng xuất", "Dangxuat")</button>*@
+    </form>
+}
+    </div>
+
